@@ -1,3 +1,0 @@
-/mnt/f/work/UNIT_SDK/UNITDemo/build/CMakeFiles/edit_cache.dir
-/mnt/f/work/UNIT_SDK/UNITDemo/build/CMakeFiles/rebuild_cache.dir
-/mnt/f/work/UNIT_SDK/UNITDemo/build/CMakeFiles/UNITdemo.dir

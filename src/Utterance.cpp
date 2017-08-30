@@ -8,7 +8,6 @@
 
 #include <iostream>
 
-// libcurl库下载链接：https://curl.haxx.se/download.html
 // unit对话接口url
 const static std::string get_utterance_url = 
          "https://aip.baidubce.com/rpc/2.0/solution/v1/unit_utterance";
