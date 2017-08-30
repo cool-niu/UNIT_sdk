@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -O0   CMakeFiles/UNITdemo.dir/src/AccessToken.o CMakeFiles/UNITdemo.dir/src/main.o  -o bin/UNITdemo -rdynamic -lcurl 
