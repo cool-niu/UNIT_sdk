@@ -10,11 +10,14 @@ link_libraries(curl)
 set(SRC_FILES
     src/AccessToken.cpp
     src/Utterance.cpp
-    src/main.cpp)
+    src/base64.cpp
+    src/main.cpp
+    )
 
 set(HEAD_FILES
     src/AccessToken.h
     src/Utterance.h
+    src/base64.h
     )
 
 set(SRCFILES ${SRC_FILES} ${HEAD_FILES})
@@ -22,7 +25,3 @@ set(SRCFILES ${SRC_FILES} ${HEAD_FILES})
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
 add_executable(${PROJECT_NAME} ${SRCFILES})
-
-
-
-
