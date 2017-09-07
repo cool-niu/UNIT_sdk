@@ -50,8 +50,8 @@ int VoiceRecognOnline(std::string &result, const std::string& access, const char
 
     //put your own params here
     const char *cuid = "yzm_2017_niuxs";
-    const char *apiKey = "IMwVFLLuNB9g74ZTOpw0c8v6";
-    const char *secretKey = "QbehCt8y9BkQ00QlDNlA1ekVZMSwSWx3";
+    // const char *apiKey = "IMwVFLLuNB9g74ZTOpw0c8v6";
+    // const char *secretKey = "QbehCt8y9BkQ00QlDNlA1ekVZMSwSWx3";
 
     std::string token = access;
     char host[MAX_BUFFER_SIZE];
@@ -98,7 +98,7 @@ int VoiceRecognOnline(std::string &result, const std::string& access, const char
     rapidjson::Document doc;
     doc.SetObject();
     rapidjson::Document::AllocatorType & allocator = doc.GetAllocator();
-    doc.AddMember("format", "pcm", allocator);
+    doc.AddMember("format", "wav", allocator);
     doc.AddMember("rate", 8000, allocator);
     doc.AddMember("channel", 1, allocator);
     rapidjson::Value val(rapidjson::kStringType);

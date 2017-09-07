@@ -1,5 +1,7 @@
 #include "AccessToken.h"
 #include "Utterance.h"
+#include "VoiceRecognition.h"
+#include "VoiceSynthesis.h"
 
 #include "rapidjson/document.h"
 #include "rapidjson/stringbuffer.h"
@@ -7,12 +9,17 @@
 
 #include <string>
 #include <iostream>
-int main()
+int main(int argc, char* argv[])
 {
     std::string access;
     std::string ak = "IMwVFLLuNB9g74ZTOpw0c8v6";
     std::string sk = "QbehCt8y9BkQ00QlDNlA1ekVZMSwSWx3";
     get_access_token(access, ak, sk);
+
+
+    std::string resBuf;
+    VoiceRecognOnline(resBuf, access, "../voice/3.wav");
+    std::cout << resBuf << std::endl;
 
     std::cout << "可以开始进行对话：";
     std::string input;
@@ -70,6 +77,7 @@ int main()
         {
             rapidjson::Value &v = actions[i];
             std::cout << v["say"].GetString() << std::endl;
+            VoiceSynthesisOnline(access, std::string(v["say"].GetString());
         }
         
     }

@@ -11,6 +11,8 @@ set(SRC_FILES
     src/AccessToken.cpp
     src/Utterance.cpp
     src/base64.cpp
+    src/VoiceRecognition.cpp
+    src/VoiceSynthesis.cpp
     src/main.cpp
     )
 
@@ -18,6 +20,8 @@ set(HEAD_FILES
     src/AccessToken.h
     src/Utterance.h
     src/base64.h
+    src/VoiceRecognition.h
+    src/VoiceSynthesis.h
     )
 
 set(SRCFILES ${SRC_FILES} ${HEAD_FILES})
