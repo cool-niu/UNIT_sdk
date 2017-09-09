@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
 
     std::string resBuf;
-    VoiceRecognOnline(resBuf, access, "../voice/3.wav");
+    VoiceRecognOnline(resBuf, access, "../voice/test.pcm");
     std::cout << resBuf << std::endl;
 
     std::cout << "可以开始进行对话：";
@@ -64,8 +64,9 @@ int main(int argc, char* argv[])
             std::cout << "result parse error" << std::endl;
             return -1;
         }
-
+        std::cout << result << std::endl;
         rapidjson::Value &ret = ret_doc["result"];
+        
         rapidjson::Value &sess_id = ret["session_id"];
         assert(sess_id.IsString());
         session_id = sess_id.GetString();
@@ -77,7 +78,8 @@ int main(int argc, char* argv[])
         {
             rapidjson::Value &v = actions[i];
             std::cout << v["say"].GetString() << std::endl;
-            VoiceSynthesisOnline(access, std::string(v["say"].GetString());
+            std::string text = v["say"].GetString();
+            VoiceSynthesisOnline(access, text);
         }
         
     }

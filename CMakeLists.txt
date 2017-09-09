@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.4.0 FATAL_ERROR)
 
 project(UNITdemo)
 
+set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O0")
 include_directories(${PROJECT_SOURCE_DIR}/externals/rapidjson/include ${PROJECT_SOURCE_DIR}/externals/curl)
 link_libraries(curl)

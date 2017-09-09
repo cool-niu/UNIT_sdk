@@ -98,7 +98,7 @@ int VoiceRecognOnline(std::string &result, const std::string& access, const char
     rapidjson::Document doc;
     doc.SetObject();
     rapidjson::Document::AllocatorType & allocator = doc.GetAllocator();
-    doc.AddMember("format", "wav", allocator);
+    doc.AddMember("format", "pcm", allocator);
     doc.AddMember("rate", 8000, allocator);
     doc.AddMember("channel", 1, allocator);
     rapidjson::Value val(rapidjson::kStringType);
